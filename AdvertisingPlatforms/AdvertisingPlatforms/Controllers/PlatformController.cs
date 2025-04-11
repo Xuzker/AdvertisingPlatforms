@@ -22,13 +22,27 @@ namespace AdvertisingPlatforms.Controllers
         /// </summary>
         /// <param name="lines">Массив строк, каждая из которых содержит платформу и локации.</param>
         [HttpPost("upload")]
-        public IActionResult UploadAds([FromBody] string[] lines)
+        public async Task<IActionResult> UploadAds(IFormFile file)
         {
-            if (lines == null || lines.Length == 0)
-                return BadRequest("No data provided.");
+            if (file == null || file.Length == 0)
+                return BadRequest("No file provided.");
 
-            _platformInformation.LoadFromFilePlatfroms(lines);
-            return Ok("Data loaded successfully.");
+            try
+            {
+                using var reader = new StreamReader(file.OpenReadStream());
+                var lines = new List<string>();
+                while (await reader.ReadLineAsync() is { } line)
+                {
+                    lines.Add(line);
+                }
+
+                _platformInformation.LoadFromFilePlatfroms(lines.ToArray());
+                return Ok("Data loaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         /// <summary>

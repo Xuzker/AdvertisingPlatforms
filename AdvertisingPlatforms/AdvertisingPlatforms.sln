@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvertisingPlatforms", "AdvertisingPlatforms\AdvertisingPlatforms.csproj", "{FB0EB950-6677-4195-AB4C-AEE1C49F274B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvertisingPlatforms", "AdvertisingPlatforms\AdvertisingPlatforms.csproj", "{FB0EB950-6677-4195-AB4C-AEE1C49F274B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvertisingPlatforms.Tests", "AdvertisingPlatforms.Tests\AdvertisingPlatforms.Tests.csproj", "{65445FCA-5D97-4614-9C50-00C20A684177}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FB0EB950-6677-4195-AB4C-AEE1C49F274B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0EB950-6677-4195-AB4C-AEE1C49F274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB0EB950-6677-4195-AB4C-AEE1C49F274B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65445FCA-5D97-4614-9C50-00C20A684177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65445FCA-5D97-4614-9C50-00C20A684177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65445FCA-5D97-4614-9C50-00C20A684177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65445FCA-5D97-4614-9C50-00C20A684177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
